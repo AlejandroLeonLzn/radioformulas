@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RectanguloActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rectangulo"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangulo1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="176dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivr">
+
+        <RadioButton
+            android:id="@+id/rr1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="negrita" />
+
+        <RadioButton
+            android:id="@+id/rr2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cursiva" />
+
+        <RadioButton
+            android:id="@+id/rr3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="normal" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/letras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="letrasr"
+        android:text="letras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+
+    <TextView
+        android:id="@+id/txtrec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="132dp"
+        android:text="resultado"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/arear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:onClick="arearect"
+        android:text="area"
+        app:layout_constraintStart_toEndOf="@+id/letras"
+        app:layout_constraintTop_toBottomOf="@+id/txtrec" />
+
+    <EditText
+        android:id="@+id/edr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="base"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup4"
+        app:layout_constraintTop_toBottomOf="@+id/ivr" />
+
+    <EditText
+        android:id="@+id/edr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="altura"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/edr1"
+        app:layout_constraintTop_toBottomOf="@+id/edr1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
